@@ -1,3 +1,5 @@
+use std::result;
+
 fn main() {
     println!("Hello, world!");
 }
@@ -241,4 +243,72 @@ fn materi_two_dimensional_array() {
     println!("--- ARRAY 2D ---");
     // Akses baris ke-0, kolom ke-2 (angka 3)
     println!("Isi baris 1 kolom 3: {}", matriks[0][2]);
+}
+
+
+// 1. Syarat Promo Kopi: Buat variabel harga_kopi (integer) dan status_member (boolean).
+// Cek apakah harga_kopi lebih dari 25000 DAN status_member bernilai benar.
+#[test]
+fn soal_1(){
+    let harga_kopi = 100000;
+    let status_number = true;
+
+    let result = harga_kopi > 25000 && status_number == true;
+
+    println!("Harga Kopi : {harga_kopi} dan Status Member : {status_number}");
+    println!("Hasil cek : {result}");
+}
+
+// 2. Validasi Login: Ada variabel email_input (string/&str) dan password_input (string/&str).
+// Cek apakah email_input TIDAK kosong (tidak sama dengan "") DAN panjang password_input lebih dari 8 karakter.
+#[test]
+fn soal_2() {
+    let email_input = "jondoe@gmail.com";
+    let password_input = "Pwdpwd88";
+
+    let result = email_input != "" && password_input.len() >= 8;
+
+    println!("Email : {email_input}, Password: {password_input}");
+    println!("{result}");
+}
+
+// 3. Akses Admin: Buat variabel role (string/&str).
+// Cek apakah role sama dengan "admin" ATAU role sama dengan "super_user".
+#[test]
+fn soal_3() {
+    let mut role = "admin";
+    println!("{role}");
+
+    role = "super_user";
+
+    let result = role == "admin" || role == "super_user";
+
+    println!("{result}");
+}
+
+// 4. Cek Stok & Toko: Variabel jumlah_stok (integer) dan is_toko_tutup (boolean).
+// Cek apakah jumlah_stok lebih dari 0 DAN toko TIDAK tutup (gunakan operator !).
+#[test]
+fn soal_4(){
+    let jumlah_stok: i8 = 5;
+    let is_toko_tutup: bool = false;
+
+    let result = jumlah_stok > 0 && !is_toko_tutup;
+
+    println!("Stok? {jumlah_stok}, Toko buka? {is_toko_tutup}");
+    print!("Boleh belanja? {result}");
+}
+
+
+// Diskon Pelajar: Variabel umur (integer) dan is_pelajar (boolean).
+// Cek apakah umur di bawah 20 tahun ATAU is_pelajar bernilai benar.
+#[test]
+fn soal_5() {
+    let umur = 20;
+    let is_pelajar = false;
+
+    let result = umur < 20 || !is_pelajar;
+
+    println!("{umur}, {is_pelajar}");
+    println!("{result}");
 }
