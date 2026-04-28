@@ -47,3 +47,17 @@ fn materi_data_types_scalar_integer(){
     let c: usize = 8;
     println!("{:?}", c);
 }
+
+
+#[test]
+fn materi_data_types_scalar_konversi_tipe_number_data() {
+    // Konversi kecil ke besar
+    let a: u8 = 10;
+    let b: u32 = a as u32; // Konversi dari u8 ke u32
+    println!("Nilai : {b}");
+
+    // Konversi besar ke kecil
+    let c: i32 = 256;
+    let d: i8 = c as i8;
+    println!("Nilai : {d}");
+}
