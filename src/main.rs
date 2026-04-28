@@ -228,3 +228,17 @@ fn materi_mutable_array() {
 
     println!("Stok baru: {:?}", stok);
 }
+
+
+#[test]
+fn materi_two_dimensional_array() {
+    // Array 2x3 (2 baris, 3 kolom)
+    let matriks = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ];
+
+    println!("--- ARRAY 2D ---");
+    // Akses baris ke-0, kolom ke-2 (angka 3)
+    println!("Isi baris 1 kolom 3: {}", matriks[0][2]);
+}
