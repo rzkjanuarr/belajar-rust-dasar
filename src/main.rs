@@ -146,3 +146,24 @@ fn materi_data_types_compound_destructuring_tuple() {
     println!("--- CUMA AMBIL SATU NILAI ---");
     println!("Titik Awal: {titik_awal}");
 }
+
+
+
+#[test]
+fn materi_tuple_mutable() {
+    // 1. Deklarasi Tuple yang mutable pake 'mut'
+    let mut status_mesin = ("OFF", 0);
+
+    println!("--- SEBELUM DIUBAH ---");
+    println!("Status: {}, Suhu: {}", status_mesin.0, status_mesin.1);
+
+    // 2. Update nilai pake index (titik)
+    status_mesin.0 = "ON";
+    status_mesin.1 = 85;
+
+    println!("--- SESUDAH DIUBAH ---");
+    println!("Status: {}, Suhu: {}", status_mesin.0, status_mesin.1);
+
+    // 3. Inget: Tipe data gak boleh diganti!
+    // status_mesin.1 = "Panas"; // Ini bakal ERROR karena index .1 harus integer
+}
