@@ -34,3 +34,16 @@ fn materi_comment() {
     println!("Cek terminal, komentar nggak bakal muncul di sini!");
     println!("Skor gue: {skor}");
 }
+
+
+#[test]
+fn materi_data_types_scalar_integer(){
+    let a: i8 = -4;
+    println!("{}", a);
+
+    let b: u32 = 1000;
+    println!("{}", b);
+
+    let c: usize = 8;
+    println!("{:?}", c);
+}
