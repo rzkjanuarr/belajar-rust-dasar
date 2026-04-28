@@ -167,3 +167,22 @@ fn materi_tuple_mutable() {
     // 3. Inget: Tipe data gak boleh diganti!
     // status_mesin.1 = "Panas"; // Ini bakal ERROR karena index .1 harus integer
 }
+
+
+#[test]
+fn materi_tuple_unit() {
+    // 1. Membuat Unit Value
+    let unit_kosong = ();
+
+    println!("--- UNIT TYPE ---");
+    // Karena isinya kosong, kita pake {:?} (Debug mode) buat nampilinnya
+    println!("Isi dari unit_kosong: {:?}", unit_kosong);
+
+    // 2. Unit biasanya muncul dari fungsi yang gak balikin apa-apa
+    fn fungsi_gak_jelas() {
+        println!("Lagi lari kodenya...");
+    }
+
+    let hasil = fungsi_gak_jelas();
+    println!("Nilai yang dibalikin fungsi: {:?}", hasil);
+}
