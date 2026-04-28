@@ -201,3 +201,16 @@ fn materi_membuat_array() {
     println!("Bulan pertama: {}", bulan[0]);
     println!("Daftar angka: {:?}", angka);
 }
+
+
+
+#[test]
+fn materi_mengakses_array() {
+    let daftar_harga = [15000, 20000, 25000];
+
+    let harga_satu = daftar_harga[0];
+    let harga_dua = daftar_harga[1];
+
+    println!("--- AKSES ARRAY ---");
+    println!("Harga 1: {harga_satu}, Harga 2: {harga_dua}");
+}
