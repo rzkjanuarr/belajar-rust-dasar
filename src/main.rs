@@ -68,3 +68,22 @@ fn materi_data_types_scalar_float() {
     let pi = 3.14;
     println!("Nilai : {pi}");
 }
+
+
+#[test]
+fn materi_data_types_scalar_boolean() {
+    // 1. Deklarasi eksplisit
+    let is_rust_hard: bool = false;
+
+    // 2. Deklarasi otomatis (Type Inference)
+    let is_learning = true;
+
+    // 3. Boolean dari hasil perbandingan
+    let angka = 10;
+    let apakah_lebih_besar = angka > 5; // Isinya bakal true
+
+    println!("--- BOOLEAN ---");
+    println!("Apakah Rust susah? {is_rust_hard}");
+    println!("Lagi belajar? {is_learning}");
+    println!("Apakah 10 > 5? {apakah_lebih_besar}");
+}
