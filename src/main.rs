@@ -115,3 +115,15 @@ fn materi_data_types_compound_membuat_tuple() {
     let personal = ("Rizki", 24, true);
     println!("{:?}", personal);
 }
+
+
+#[test]
+fn materi_data_types_compound_mengakses_tuple() {
+    let produk = ("Kopi Susu", 15000, true);
+
+    let nama_produk = produk.0;
+    let harga = produk.1;
+
+    println!("--- AKSES PAKE INDEX ---");
+    println!("Produk: {nama_produk}, Harga: {harga}");
+}
