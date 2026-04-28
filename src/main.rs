@@ -127,3 +127,22 @@ fn materi_data_types_compound_mengakses_tuple() {
     println!("--- AKSES PAKE INDEX ---");
     println!("Produk: {nama_produk}, Harga: {harga}");
 }
+
+
+
+#[test]
+fn materi_data_types_compound_destructuring_tuple() {
+    let koordinat = (10.5, 20.0, 5.2);
+
+    let (x, y, z) = koordinat;
+
+    println!("--- HASIL DESTRUCTURING ---");
+    println!("Titik X: {x}");
+    println!("Titik Y: {y}");
+    println!("Titik Z: {z}");
+
+    // Ignored Values (Kalau cuma mau ambil X tapi sisanya dibuang/dicuekin)
+    let (titik_awal, _, _) = koordinat;
+    println!("--- CUMA AMBIL SATU NILAI ---");
+    println!("Titik Awal: {titik_awal}");
+}
