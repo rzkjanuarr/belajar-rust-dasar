@@ -108,3 +108,10 @@ fn materi_data_types_scalar_char() {
     println!("Emoji: {emoji}");
     println!("Karakter Mandarin: {mandarin}");
 }
+
+
+#[test]
+fn materi_data_types_compound_membuat_tuple() {
+    let personal = ("Rizki", 24, true);
+    println!("{:?}", personal);
+}
