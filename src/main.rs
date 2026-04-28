@@ -61,3 +61,10 @@ fn materi_data_types_scalar_konversi_tipe_number_data() {
     let d: i8 = c as i8;
     println!("Nilai : {d}");
 }
+
+
+#[test]
+fn materi_data_types_scalar_float() {
+    let pi = 3.14;
+    println!("Nilai : {pi}");
+}
