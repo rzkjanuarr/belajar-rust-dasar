@@ -214,3 +214,17 @@ fn materi_mengakses_array() {
     println!("--- AKSES ARRAY ---");
     println!("Harga 1: {harga_satu}, Harga 2: {harga_dua}");
 }
+
+
+
+#[test]
+fn materi_mutable_array() {
+    let mut stok = [10, 20, 30];
+
+    println!("Stok awal: {:?}", stok);
+
+    // Ganti nilai di index ke-1
+    stok[1] = 50;
+
+    println!("Stok baru: {:?}", stok);
+}
