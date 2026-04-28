@@ -186,3 +186,18 @@ fn materi_tuple_unit() {
     let hasil = fungsi_gak_jelas();
     println!("Nilai yang dibalikin fungsi: {:?}", hasil);
 }
+
+
+
+#[test]
+fn materi_membuat_array() {
+    // 1. Cara manual
+    let bulan: [&str; 3] = ["Januari", "Februari", "Maret"];
+
+    // 2. Cara instan (isi 10 angka 0 semua)
+    let angka = [0; 10];
+
+    println!("--- MEMBUAT ARRAY ---");
+    println!("Bulan pertama: {}", bulan[0]);
+    println!("Daftar angka: {:?}", angka);
+}
