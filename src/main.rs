@@ -87,3 +87,24 @@ fn materi_data_types_scalar_boolean() {
     println!("Lagi belajar? {is_learning}");
     println!("Apakah 10 > 5? {apakah_lebih_besar}");
 }
+
+
+
+#[test]
+fn materi_data_types_scalar_char() {
+    // 1. Karakter biasa
+    let huruf = 'R';
+
+    // 2. Karakter angka (tapi tipenya char, bukan integer)
+    let angka_char = '7';
+
+    // 3. Karakter Spesial / Emoji
+    let emoji = '🚀';
+    let mandarin = '学';
+
+    println!("--- CHARACTER ---");
+    println!("Huruf: {huruf}");
+    println!("Angka (Char): {angka_char}");
+    println!("Emoji: {emoji}");
+    println!("Karakter Mandarin: {mandarin}");
+}
