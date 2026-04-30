@@ -1,4 +1,4 @@
-use std::result;
+mod materi_variable;
 
 fn main() {
     println!("Hello, world!");
@@ -19,8 +19,6 @@ fn materi_variable() {
     println!("{}", age);
 }
 
-
-
 #[test]
 fn materi_comment() {
     // 1. Ini namanya Single Line Comment (pake dua garis miring)
@@ -37,9 +35,8 @@ fn materi_comment() {
     println!("Skor gue: {skor}");
 }
 
-
 #[test]
-fn materi_data_types_scalar_integer(){
+fn materi_data_types_scalar_integer() {
     let a: i8 = -4;
     println!("{}", a);
 
@@ -49,7 +46,6 @@ fn materi_data_types_scalar_integer(){
     let c: usize = 8;
     println!("{:?}", c);
 }
-
 
 #[test]
 fn materi_data_types_scalar_konversi_tipe_number_data() {
@@ -64,13 +60,11 @@ fn materi_data_types_scalar_konversi_tipe_number_data() {
     println!("Nilai : {d}");
 }
 
-
 #[test]
 fn materi_data_types_scalar_float() {
     let pi = 3.14;
     println!("Nilai : {pi}");
 }
-
 
 #[test]
 fn materi_data_types_scalar_boolean() {
@@ -89,8 +83,6 @@ fn materi_data_types_scalar_boolean() {
     println!("Lagi belajar? {is_learning}");
     println!("Apakah 10 > 5? {apakah_lebih_besar}");
 }
-
-
 
 #[test]
 fn materi_data_types_scalar_char() {
@@ -111,13 +103,11 @@ fn materi_data_types_scalar_char() {
     println!("Karakter Mandarin: {mandarin}");
 }
 
-
 #[test]
 fn materi_data_types_compound_membuat_tuple() {
     let personal = ("Rizki", 24, true);
     println!("{:?}", personal);
 }
-
 
 #[test]
 fn materi_data_types_compound_mengakses_tuple() {
@@ -129,8 +119,6 @@ fn materi_data_types_compound_mengakses_tuple() {
     println!("--- AKSES PAKE INDEX ---");
     println!("Produk: {nama_produk}, Harga: {harga}");
 }
-
-
 
 #[test]
 fn materi_data_types_compound_destructuring_tuple() {
@@ -148,8 +136,6 @@ fn materi_data_types_compound_destructuring_tuple() {
     println!("--- CUMA AMBIL SATU NILAI ---");
     println!("Titik Awal: {titik_awal}");
 }
-
-
 
 #[test]
 fn materi_tuple_mutable() {
@@ -170,7 +156,6 @@ fn materi_tuple_mutable() {
     // status_mesin.1 = "Panas"; // Ini bakal ERROR karena index .1 harus integer
 }
 
-
 #[test]
 fn materi_tuple_unit() {
     // 1. Membuat Unit Value
@@ -189,8 +174,6 @@ fn materi_tuple_unit() {
     println!("Nilai yang dibalikin fungsi: {:?}", hasil);
 }
 
-
-
 #[test]
 fn materi_membuat_array() {
     // 1. Cara manual
@@ -204,8 +187,6 @@ fn materi_membuat_array() {
     println!("Daftar angka: {:?}", angka);
 }
 
-
-
 #[test]
 fn materi_mengakses_array() {
     let daftar_harga = [15000, 20000, 25000];
@@ -216,8 +197,6 @@ fn materi_mengakses_array() {
     println!("--- AKSES ARRAY ---");
     println!("Harga 1: {harga_satu}, Harga 2: {harga_dua}");
 }
-
-
 
 #[test]
 fn materi_mutable_array() {
@@ -231,25 +210,20 @@ fn materi_mutable_array() {
     println!("Stok baru: {:?}", stok);
 }
 
-
 #[test]
 fn materi_two_dimensional_array() {
     // Array 2x3 (2 baris, 3 kolom)
-    let matriks = [
-        [1, 2, 3],
-        [4, 5, 6]
-    ];
+    let matriks = [[1, 2, 3], [4, 5, 6]];
 
     println!("--- ARRAY 2D ---");
     // Akses baris ke-0, kolom ke-2 (angka 3)
     println!("Isi baris 1 kolom 3: {}", matriks[0][2]);
 }
 
-
 // 1. Syarat Promo Kopi: Buat variabel harga_kopi (integer) dan status_member (boolean).
 // Cek apakah harga_kopi lebih dari 25000 DAN status_member bernilai benar.
 #[test]
-fn soal_1(){
+fn soal_1() {
     let harga_kopi = 100000;
     let status_number = true;
 
@@ -289,7 +263,7 @@ fn soal_3() {
 // 4. Cek Stok & Toko: Variabel jumlah_stok (integer) dan is_toko_tutup (boolean).
 // Cek apakah jumlah_stok lebih dari 0 DAN toko TIDAK tutup (gunakan operator !).
 #[test]
-fn soal_4(){
+fn soal_4() {
     let jumlah_stok: i8 = 5;
     let is_toko_tutup: bool = false;
 
@@ -298,7 +272,6 @@ fn soal_4(){
     println!("Stok? {jumlah_stok}, Toko buka? {is_toko_tutup}");
     print!("Boleh belanja? {result}");
 }
-
 
 // Diskon Pelajar: Variabel umur (integer) dan is_pelajar (boolean).
 // Cek apakah umur di bawah 20 tahun ATAU is_pelajar bernilai benar.
