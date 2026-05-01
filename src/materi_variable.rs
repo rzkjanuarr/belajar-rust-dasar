@@ -1,4 +1,4 @@
-use std::io::read_to_string;
+use std::{i32, i64, io::read_to_string, u32};
 
 // Example
 #[test]
@@ -251,4 +251,263 @@ fn soal_20() {
     let fahrenheit = (celcius * 9.0 / 5.0) + 32.0;
     println!("Celcius: {}", celcius);
     println!("Fahrenheit: {}", fahrenheit);
+}
+
+// SOAL 1
+// Buat variable imutable "nama" bertipe &str dan "umur" bertipe u8,
+// tampilkan dengan format: "Nama: ..., Umur: ..."
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_21() {
+    let nama = "Jhon Paul 777";
+    let umur = 25_u8;
+    println!("Nama : {nama}, Umur: {umur}");
+}
+
+// SOAL 2
+// Buat variable "nilai_int" bertipe i32 = 42,
+// konversi ke f64 menggunakan "as", simpan ke "nilai_float", tampilkan keduanya.
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_22() {
+    let nilai_int: i32 = 42;
+    let nilai_float = nilai_int as f64;
+    println!("Nilai INT : {}", nilai_int);
+    println!("Nilai FLOAT : {}", nilai_float);
+}
+
+// SOAL 3
+// Buat variable mutable "suhu_celcius": f64 = 37.5,
+// konversi ke i32 menggunakan "as", tampilkan sebelum dan sesudah konversi.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_23() {
+    let mut suhu_celcius: f64 = 37.5;
+    let suhu_celcius = suhu_celcius as i32;
+    println!("Suhu Celcius Sebelum: {}", suhu_celcius);
+    println!("Suhu Celcius Sesudah: {}", suhu_celcius);
+}
+
+// SOAL 4
+// Buat variable "poin": u8 = 200,
+// konversi ke u32 menggunakan "as", lalu kalikan 1000, tampilkan hasilnya.
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+#[test]
+fn soal_24() {
+    let poin: u8 = 200;
+    let konversi_poin = poin as u32;
+    let result = konversi_poin * 1000;
+    println!("{}", result);
+}
+
+// SOAL 5
+// Lakukan shadowing: buat variable "angka": f64 = 9.99,
+// shadow menjadi i32 menggunakan "as", tampilkan.
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+#[test]
+fn soal_25() {
+    let angka: f64 = 9.99;
+    let angka = angka as i32;
+    println!("{}", angka);
+}
+
+// SOAL 6
+// Buat variable "lebar": u32 = 1920 dan "tinggi": u32 = 1080,
+// hitung total pixel (lebar * tinggi), simpan ke "total_pixel", tampilkan.
+// Clue: nama function -> fn soal_6(), wajib pakai attribute #[test]
+#[test]
+fn soal_26() {
+    let lebar: u32 = 1920;
+    let tinggi: u32 = 1080;
+
+    let total_pixel = (lebar * tinggi);
+    println!("{total_pixel}");
+}
+
+// SOAL 7
+// Buat variable "a": i64 = 1_000_000_000,
+// konversi ke i32 menggunakan "as", tampilkan keduanya.
+// (perhatikan apa yang terjadi pada nilainya!)
+// Clue: nama function -> fn soal_7(), wajib pakai attribute #[test]
+#[test]
+fn soal_27() {
+    let a: i64 = 1000000000;
+    let b = a as i32;
+    println!("{}", b);
+}
+
+// SOAL 8
+// Buat variable mutable "level": u8 = 1, tampilkan,
+// lalu gunakan assignment untuk tambah 4, tampilkan lagi.
+// Clue: nama function -> fn soal_8(), wajib pakai attribute #[test]
+#[test]
+fn soal_28() {
+    let mut level: u8 = 1;
+    level = level + 4;
+    println!("{}", level);
+}
+
+// SOAL 9
+// Buat variable "lat": f64 = -7.250445 dan "lon": f64 = 112.768845,
+// tampilkan dengan format: "Koordinat: lat={}, lon={}"
+// Clue: nama function -> fn soal_9(), wajib pakai attribute #[test]
+#[test]
+fn soal_29() {
+    let lat = -7.250445;
+    let lon = 112.768845;
+    println!("Koordinat: lat={lat}, lon={lon}");
+}
+
+// SOAL 10
+// Buat variable "harga": f64 = 150000.0 dan "diskon": f64 = 0.2,
+// hitung harga setelah diskon, simpan ke "harga_akhir", tampilkan.
+// Clue: nama function -> fn soal_10(), wajib pakai attribute #[test]
+#[test]
+fn soal_30() {
+    let harga = 150000.0;
+    let diskon = 0.2;
+    let harga_akhir = harga / diskon;
+
+    println!("Harga Promo nih {} bro!", harga_akhir);
+}
+
+// SOAL 11
+// Buat variable "x": f32 = 7.8,
+// konversi ke i32 menggunakan "as" (perhatikan nilainya terpotong!), tampilkan keduanya.
+// Clue: nama function -> fn soal_11(), wajib pakai attribute #[test]
+#[test]
+fn soal_31() {
+    let x = 7.8;
+    let z = x as i32;
+
+    println!("Nilai Aslinya : {}", x);
+    println!("Nilai Sesudahnya : {}", z);
+}
+
+// SOAL 12
+// Buat variable "is_rust_fun": bool = true dan "bahasa": &str = "Rust",
+// tampilkan dengan format: "Belajar {} menyenangkan: {}"
+// Clue: nama function -> fn soal_12(), wajib pakai attribute #[test]
+#[test]
+fn soal_32() {
+    let is_rust_fun = true;
+    let bahasa = "Rust";
+
+    println!("Belajar {bahasa} menyenangkan: {is_rust_fun}");
+}
+
+// SOAL 13
+// Buat variable "byte_val": u8 = 255,
+// konversi ke i8 menggunakan "as", tampilkan keduanya.
+// (perhatikan apa yang terjadi — ini namanya overflow!)
+// Clue: nama function -> fn soal_13(), wajib pakai attribute #[test]
+#[test]
+fn soal_33() {
+    let byte_val = 255;
+    let x = byte_val as i8;
+
+    println!("{}", x);
+}
+
+// SOAL 14
+// Buat variable "jarak_km": f64 = 5.7,
+// konversi ke meter (kalikan 1000.0), simpan ke "jarak_meter": f64, tampilkan keduanya.
+// Clue: nama function -> fn soal_14(), wajib pakai attribute #[test]
+#[test]
+fn soal_34() {
+    let jarak_km = 5.7;
+    let konversi_to_integer = jarak_km as u32;
+    let jarak_meter = konversi_to_integer * 1000;
+
+    println!("Hasil Sebelum di Konversi: {}", jarak_km);
+    println!("Hasil sesudah di konversi : {}", konversi_to_integer);
+    println!("Hasil perkalian : {}", jarak_meter);
+}
+
+// SOAL 15
+// Lakukan shadowing 2 kali:
+// "teks" = "100", shadow ke i32 = 100, shadow lagi ke f64 = 100.0, tampilkan.
+// Clue: nama function -> fn soal_15(), wajib pakai attribute #[test]
+#[test]
+fn soal_35() {
+    let teks = "100";
+    println!("{}", teks);
+
+    let teks = 100_i32;
+    println!("{}", teks);
+
+    let teks = 100.0_f64;
+    println!("{}", teks);
+}
+
+// SOAL 16
+// Buat variable "saldo": f64 = 1_500_000.0,
+// konversi ke i64 menggunakan "as", tampilkan keduanya.
+// Clue: nama function -> fn soal_16(), wajib pakai attribute #[test]
+#[test]
+fn soal_36() {
+    let saldo = 1_500_000.0;
+    let konversi_to_integer = saldo as u32;
+
+    println!("Hasil Sebelum Konversi: {}", saldo);
+    println!("Hasil sesudah Konversi: {}", konversi_to_integer);
+}
+
+// SOAL 17
+// Buat variable mutable "hp": u32 = 100, tampilkan,
+// kurangi 35 lalu tampilkan, kurangi 25 lagi lalu tampilkan.
+// Clue: nama function -> fn soal_17(), wajib pakai attribute #[test]
+#[test]
+fn soal_37() {
+    let mut hp = 100;
+
+    hp = hp - 35;
+
+    println!("Result: {}", hp);
+}
+
+// SOAL 18
+// Buat variable "nilai_a": f64 = 85.5 dan "nilai_b": f64 = 90.0,
+// hitung rata-rata, simpan ke "rata_rata", tampilkan.
+// Clue: nama function -> fn soal_18(), wajib pakai attribute #[test]
+#[test]
+fn soal_38() {
+    let nilai_a = 85.5;
+    let nilai_b = 90.0;
+
+    let avg = (nilai_a + nilai_b) / 2.0;
+
+    println!("avg: {}", avg);
+}
+
+// SOAL 19
+// Buat variable "umur_f64": f64 = 20.9,
+// konversi ke u8 menggunakan "as", tampilkan keduanya.
+// (perhatikan nilai desimalnya terpotong!)
+// Clue: nama function -> fn soal_19(), wajib pakai attribute #[test]
+#[test]
+fn soal_39() {
+    let umur = 20.9;
+    let convert_to_integer = umur as u8;
+
+    println!("Nilai Sebelum Konvert: {}", umur);
+    println!("Nilai sesudah konvert: {}", convert_to_integer);
+}
+
+// SOAL 20
+// Buat variable "eth_price": f64 = 3_450.75,
+// "eth_amount": f64 = 2.5,
+// hitung total nilai dalam USD, konversi ke i64 menggunakan "as",
+// tampilkan semua: harga, jumlah, total f64, dan total i64.
+// Clue: nama function -> fn soal_20(), wajib pakai attribute #[test]
+#[test]
+fn soal_40() {
+    let eth_price = 3_450.75;
+    let eth_amount = 2.5;
+
+    let total_dalam_bentuk_usd = eth_price * eth_amount;
+    let konversi_usd_to_integer = total_dalam_bentuk_usd as u64;
+    println!("Harga ETH PRICE : {}", eth_price);
+    println!("Harga ETH AMOUNT : {}", eth_amount);
+    println!("Harga dalam bentuk USD : {}", konversi_usd_to_integer);
 }
