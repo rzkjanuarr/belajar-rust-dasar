@@ -176,10 +176,10 @@ fn soal_13() {
 // Clue: nama function -> fn soal_14(), wajib pakai attribute #[test]
 #[test]
 fn soal_14() {
-    let pi = 3.14;
+    let x = 3.14;
     let r = 7.0;
 
-    let luas_lingkaran = (pi * r * r);
+    let luas_lingkaran = (x * r * r);
     println!("Hasil: {}", luas_lingkaran);
 }
 
@@ -511,3 +511,120 @@ fn soal_40() {
     println!("Harga ETH AMOUNT : {}", eth_amount);
     println!("Harga dalam bentuk USD : {}", konversi_usd_to_integer);
 }
+
+// SOAL 1
+// Buat variable "ongkir": i8 dengan nilai 99 (maks pengiriman lokal dalam ribuan rupiah),
+// tampilkan dengan format: "Ongkir: Rp {}000"
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Buat variable "uang_saku": i16 dengan nilai 32_000 (rupiah harian),
+// tampilkan dengan format: "Uang saku: Rp {}"
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Buat variable mutable "gaji": i32 dengan nilai 5_000_000 (rupiah),
+// tampilkan, lalu tambahkan bonus 1_500_000, tampilkan lagi.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Buat variable "tabungan": i64 dengan nilai 80_000_000_000 (rupiah),
+// konversi ke i32 menggunakan "as", tampilkan keduanya.
+// (perhatikan apa yang terjadi — overflow!)
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Buat variable "aset_negara": i128 dengan nilai 1_000_000_000_000_000 (rupiah / 1 kuadriliun),
+// tampilkan dengan format: "Aset negara: Rp {}"
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+
+// SOAL 6
+// Buat variable "umur": u8 dengan nilai 25,
+// tampilkan dengan format: "Umur: {} tahun"
+// Clue: nama function -> fn soal_6(), wajib pakai attribute #[test]
+
+// SOAL 7
+// Buat variable "harga_tiket": u16 dengan nilai 65_000 (rupiah),
+// beli 3 tiket, hitung total, konversi ke u32 menggunakan "as", tampilkan.
+// Clue: nama function -> fn soal_7(), wajib pakai attribute #[test]
+
+// SOAL 8
+// Buat variable "dollar": u32 dengan nilai 4_294_000 (USD terbesar u32 ~ 4 juta),
+// tampilkan dengan format: "Saldo: ${}"
+// Clue: nama function -> fn soal_8(), wajib pakai attribute #[test]
+
+// SOAL 9
+// Buat variable "market_cap": u64 dengan nilai 18_000_000_000_000 (USD — market cap crypto),
+// tampilkan dengan format: "Market Cap: ${}"
+// Clue: nama function -> fn soal_9(), wajib pakai attribute #[test]
+
+// SOAL 10
+// Buat variable "total_supply": u128 dengan nilai 21_000_000_000_000_000_000_000 (simulasi token supply),
+// tampilkan dengan format: "Total Supply: {}"
+// Clue: nama function -> fn soal_10(), wajib pakai attribute #[test]
+
+// SOAL 11
+// Buat variable "harga_btc": f32 dengan nilai 96_430.50 (USD),
+// tampilkan dengan format: "Harga BTC: ${}"
+// Clue: nama function -> fn soal_11(), wajib pakai attribute #[test]
+
+// SOAL 12
+// Buat variable "harga_eth": f64 dengan nilai 3_450.758912345678 (USD),
+// tampilkan, perhatikan presisinya dibanding f32!
+// Clue: nama function -> fn soal_12(), wajib pakai attribute #[test]
+
+// SOAL 13
+// Buat variable "eth_amount": f64 = 1.575,
+// "harga_eth": f64 = 3_450.75,
+// hitung total USD, konversi ke i64 menggunakan "as", tampilkan keduanya.
+// Clue: nama function -> fn soal_13(), wajib pakai attribute #[test]
+
+// SOAL 14
+// Buat variable "rupiah": i64 = 50_000_000,
+// "kurs": f64 = 16_350.0 (1 USD = Rp 16.350),
+// hitung nilai dalam USD (rupiah as f64 / kurs), tampilkan keduanya.
+// Clue: nama function -> fn soal_14(), wajib pakai attribute #[test]
+
+// SOAL 15
+// Buat variable mutable "saldo_usd": f64 = 1_000.0,
+// tampilkan, kurangi 250.75, tampilkan, tambah 500.0, tampilkan.
+// Clue: nama function -> fn soal_15(), wajib pakai attribute #[test]
+
+// SOAL 16
+// Buat variable "is_verified": bool = true dan "username": &str = "rustacean",
+// "saldo": i64 = 10_000_000,
+// tampilkan: "User: {}, Verified: {}, Saldo: Rp {}"
+// Clue: nama function -> fn soal_16(), wajib pakai attribute #[test]
+
+// SOAL 17
+// Lakukan shadowing:
+// "harga" = 3_450_i64 (harga dalam USD integer),
+// shadow ke f64 = 3_450.0,
+// shadow ke String representation dengan format tampilkan "$3450.0"
+// Clue: nama function -> fn soal_17(), wajib pakai attribute #[test]
+
+// SOAL 18
+// Buat variable "persen_pajak": f64 = 0.11 (PPN 11%),
+// "harga_barang": i32 = 2_500_000,
+// hitung pajak (harga_barang as f64 * persen_pajak),
+// hitung total (harga_barang as f64 + pajak),
+// tampilkan semua: harga, pajak, total.
+// Clue: nama function -> fn soal_18(), wajib pakai attribute #[test]
+
+// SOAL 19
+// Buat variable "is_bull_market": bool = true,
+// "harga_eth": f64 = 3_450.75,
+// jika bull market harga naik 20% — hitung harga_baru = harga_eth + (harga_eth * 0.20),
+// tampilkan: "Bull Market: {}, Harga ETH: ${}, Prediksi: ${}"
+// Clue: nama function -> fn soal_19(), wajib pakai attribute #[test]
+
+// SOAL 20
+// Buat variable "nama_token": &str = "ETH",
+// "harga": f64 = 3_450.75,
+// "amount": f64 = 5.25,
+// "kurs_idr": f64 = 16_350.0,
+// hitung total_usd = harga * amount,
+// hitung total_idr = total_usd * kurs_idr,
+// konversi total_idr ke i64 menggunakan "as",
+// tampilkan semua dalam format yang rapi.
+// Clue: nama function -> fn soal_20(), wajib pakai attribute #[test]
