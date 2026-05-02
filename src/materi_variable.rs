@@ -941,19 +941,47 @@ fn soal_65() {
 // Berapa total tabungan Rina sekarang?
 // Simpan ke variable "total_tabungan", tampilkan.
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_66() {
+    let rina = 500;
+    let bonus_kerja_rina = 250;
+
+    let total_tabungan_rina = rina + bonus_kerja_rina;
+
+    println!("Total Tabungan Rina : ${}", total_tabungan_rina);
+}
 
 // SOAL 2
 // Sebuah warung menjual nasi goreng seharga Rp15_000 per porsi.
 // Dalam satu hari warung tersebut berhasil menjual 85 porsi.
 // Berapa total pendapatan warung hari ini?
 // Simpan ke variable "total_pendapatan", tampilkan.
-// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test
+//]
+#[test]
+fn soal_67() {
+    let nasgor = 15_000;
+    let warung_madura_dapat_menjual_porsi_dalam_sehari = 85;
+
+    let total_profit = warung_madura_dapat_menjual_porsi_dalam_sehari * nasgor;
+
+    println!("Total profit dalam sehari: Rp.{}", total_profit);
+}
 
 // SOAL 3
 // Sebuah perusahaan membagikan bonus $12_000 secara merata kepada 8 karyawan.
 // Berapa bonus yang diterima masing-masing karyawan?
 // Simpan ke variable "bonus_per_karyawan", tampilkan.
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_68() {
+    let company_x = 12_000;
+    let employee = 8;
+
+    let bonus_per_employee = company_x / employee;
+
+    println!("Bonus per Employee : ${}", bonus_per_employee);
+}
 
 // SOAL 4
 // Harga sepatu original adalah Rp1_200_000.
@@ -961,6 +989,21 @@ fn soal_65() {
 // Berapa uang cashback yang didapat dan berapa harga yang benar-benar dikeluarkan?
 // Simpan ke variable "cashback" dan "harga_real", tampilkan keduanya.
 // Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+#[test]
+fn soal_69() {
+    let harga_sepatu = 1_200_000;
+
+    let diskon = 0.10;
+
+    let harga_cashback = harga_sepatu as f64 * 0.10;
+
+    let harga_real = harga_sepatu as f64 - harga_cashback;
+
+    println!("Harga ASLI : Rp.{}", harga_sepatu);
+    println!("DISKON : {}%", diskon);
+    println!("HARGA cashback: Rp.{}", harga_cashback);
+    println!("HARGA REAL: Rp.{}", harga_real);
+}
 
 // SOAL 5
 // Alex punya $3_000 di rekening.
@@ -968,3 +1011,15 @@ fn soal_65() {
 // Berapa sisa uang Alex setelah semua pengeluaran?
 // Simpan ke variable "sisa_uang", tampilkan semua pengeluaran dan sisanya.
 // Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+#[test]
+fn soal_70() {
+    let alex = 3_000;
+
+    let apart = 850;
+    let gym = 45;
+    let bulanan = 320;
+
+    let sisa_uang = alex - apart - gym - bulanan;
+
+    println!("SISA UANG ALEX : ${}", sisa_uang);
+}
