@@ -934,3 +934,37 @@ fn soal_65() {
     println!("Dimas Bayar Kos : Rp.{}", dimas_bayar_kos);
     println!("Sisa Gaji Dimas: Rp.{}", sisa_gaji_dimas);
 }
+
+// SOAL 1
+// Rina punya tabungan $500 di rekening dollar.
+// Dia mendapat bonus kerja sebesar $250.
+// Berapa total tabungan Rina sekarang?
+// Simpan ke variable "total_tabungan", tampilkan.
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Sebuah warung menjual nasi goreng seharga Rp15_000 per porsi.
+// Dalam satu hari warung tersebut berhasil menjual 85 porsi.
+// Berapa total pendapatan warung hari ini?
+// Simpan ke variable "total_pendapatan", tampilkan.
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Sebuah perusahaan membagikan bonus $12_000 secara merata kepada 8 karyawan.
+// Berapa bonus yang diterima masing-masing karyawan?
+// Simpan ke variable "bonus_per_karyawan", tampilkan.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Harga sepatu original adalah Rp1_200_000.
+// Toko memberikan cashback 10% setelah pembelian.
+// Berapa uang cashback yang didapat dan berapa harga yang benar-benar dikeluarkan?
+// Simpan ke variable "cashback" dan "harga_real", tampilkan keduanya.
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Alex punya $3_000 di rekening.
+// Dia membayar sewa apartemen $850, langganan gym $45, dan belanja bulanan $320.
+// Berapa sisa uang Alex setelah semua pengeluaran?
+// Simpan ke variable "sisa_uang", tampilkan semua pengeluaran dan sisanya.
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
