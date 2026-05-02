@@ -1023,3 +1023,39 @@ fn soal_70() {
 
     println!("SISA UANG ALEX : ${}", sisa_uang);
 }
+
+// SOAL 1
+// Budi beli baju seharga Rp200_000.
+// Toko memberikan diskon 20%.
+// Berapa diskon yang didapat dan berapa harga yang harus dibayar?
+// Simpan ke variable "diskon" dan "harga_bayar", tampilkan keduanya.
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Sebuah restoran mengenakan pajak 10% dari total makanan.
+// Total makanan yang dipesan adalah Rp350_000.
+// Berapa pajak yang harus dibayar dan berapa total tagihan termasuk pajak?
+// Simpan ke variable "pajak" dan "total_tagihan", tampilkan keduanya.
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Sinta belanja online seharga $120.
+// Toko memberikan voucher diskon 25% dan ada biaya pengiriman $5.
+// Berapa total yang harus Sinta bayar setelah diskon dan ongkir?
+// Simpan ke variable "diskon", "harga_setelah_diskon", "total_bayar", tampilkan semua.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Sebuah startup menggaji 5 developer dengan total budget gaji $25_000 per bulan.
+// Perusahaan juga memotong pajak penghasilan 15% dari gaji masing-masing.
+// Berapa gaji per developer sebelum pajak dan berapa yang diterima setelah dipotong pajak?
+// Simpan ke variable "gaji_per_dev", "potongan_pajak", "gaji_bersih", tampilkan semua.
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Raka ingin membeli motor seharga Rp18_500_000.
+// Dealer memberikan diskon 5%, tetapi ada biaya administrasi Rp250_000 dan
+// biaya balik nama Rp375_000.
+// Berapa total uang yang harus Raka keluarkan?
+// Simpan ke variable "diskon", "harga_setelah_diskon", "total_akhir", tampilkan semua.
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
