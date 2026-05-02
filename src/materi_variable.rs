@@ -835,6 +835,16 @@ fn soal_60() {
 // Berapa sisa uang Budi sekarang?
 // Simpan ke variable "sisa_uang", tampilkan.
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_61() {
+    let budi = 500_000;
+    let budi_belanja = 175_000;
+
+    let sisa_uang = budi - budi_belanja;
+
+    println!("Uang Budi Asli: Rp.{}", budi);
+    println!("Sisa uang budi setelah belanja: Rp.{}", sisa_uang);
+}
 
 // SOAL 2
 // Harga 1 kg apel adalah Rp25_000.
@@ -842,6 +852,23 @@ fn soal_60() {
 // Berapa total yang harus Ani bayar?
 // Simpan ke variable "total_bayar", tampilkan.
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_62() {
+    let harga_1kg_apel = 25_000;
+    let ani_membeli_apel_4kg = harga_1kg_apel * 4;
+
+    let total_bayar_ani = ani_membeli_apel_4kg;
+
+    println!("Harga Apel / 1kg: Rp.{}", harga_1kg_apel);
+    println!(
+        "Ani membeli sebanyak 4kg, yang berarti: Rp.{}",
+        ani_membeli_apel_4kg
+    );
+    println!(
+        "Total yang harus dibayar Ani berarti: Rp.{}",
+        total_bayar_ani
+    );
+}
 
 // SOAL 3
 // Ada 3 orang patungan untuk beli kado.
@@ -849,12 +876,42 @@ fn soal_60() {
 // Berapa masing-masing orang harus bayar?
 // Simpan ke variable "bayar_per_orang", tampilkan.
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_63() {
+    let human = 3;
+    let harga_kado = 450_000;
+
+    let bayar_per_orang = harga_kado / human;
+
+    println!("Totaly per orang: {}", bayar_per_orang);
+}
 
 // SOAL 4
 // Toko elektronik memberikan diskon 15% untuk laptop seharga Rp8_500_000.
 // Berapa harga laptop setelah diskon?
 // Simpan ke variable "diskon" dan "harga_akhir", tampilkan keduanya.
 // Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+#[test]
+fn soal_64() {
+    let harga_laptop = 8_500_000;
+
+    let harga_diskon = harga_laptop as f64 * 0.15;
+    let harga_akhir_floating = harga_laptop as f64 - harga_diskon;
+
+    let konversi_data_to_integer = harga_akhir_floating as i64;
+
+    println!("HARGA LAPTOP ASLI: Rp.{}", harga_laptop);
+    println!("HARGA AFTER DISKON : Rp.{}", harga_diskon);
+
+    println!(
+        "HARGA AKHIR (Dalam bentuk DESIMAL) : Rp.{}",
+        harga_akhir_floating
+    );
+    println!(
+        "HARGA AKHIR (Dalam bentuk Bilangan Bulat) : Rp.{}",
+        konversi_data_to_integer
+    );
+}
 
 // SOAL 5
 // Dimas punya gaji Rp6_500_000 per bulan.
@@ -862,3 +919,18 @@ fn soal_60() {
 // Berapa uang Dimas yang tersisa setelah tabungan dan bayar kos?
 // Simpan ke variable "sisa_gaji", tampilkan.
 // Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+#[test]
+fn soal_65() {
+    let dimas_gaji = 6_500_000;
+
+    let dimas_menabung = 1_200_000;
+
+    let dimas_bayar_kos = 800_000;
+
+    let sisa_gaji_dimas = dimas_gaji - dimas_menabung - dimas_bayar_kos;
+
+    println!("Dimas Gaji Asli : Rp.{}", dimas_gaji);
+    println!("Dimas Menabung : Rp.{}", dimas_menabung);
+    println!("Dimas Bayar Kos : Rp.{}", dimas_bayar_kos);
+    println!("Sisa Gaji Dimas: Rp.{}", sisa_gaji_dimas);
+}
