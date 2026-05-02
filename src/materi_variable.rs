@@ -1,4 +1,4 @@
-use std::{i32, i64, io::read_to_string, u32};
+use std::{i32, i64, io::read_to_string, result, u32};
 
 // Example
 #[test]
@@ -1030,6 +1030,22 @@ fn soal_70() {
 // Berapa diskon yang didapat dan berapa harga yang harus dibayar?
 // Simpan ke variable "diskon" dan "harga_bayar", tampilkan keduanya.
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_71() {
+    let budi_beli_baju = 200_000;
+    let diskon = 0.20;
+
+    let nilai_potong = budi_beli_baju as f64 * diskon;
+
+    let harga_setelah_diskon = budi_beli_baju as f64 - nilai_potong;
+
+    println!("Harga ASLI: RP.{}", budi_beli_baju);
+    println!("Nilai Potong : RP.{}", nilai_potong);
+    println!(
+        "HARGA YANG HARUS BUDI BAYAR ADALAH : RP.{}",
+        harga_setelah_diskon
+    );
+}
 
 // SOAL 2
 // Sebuah restoran mengenakan pajak 10% dari total makanan.
@@ -1037,6 +1053,20 @@ fn soal_70() {
 // Berapa pajak yang harus dibayar dan berapa total tagihan termasuk pajak?
 // Simpan ke variable "pajak" dan "total_tagihan", tampilkan keduanya.
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_72() {
+    let total_pesanan = 350_000;
+    let ppn = 0.10;
+
+    let nilai_potong = total_pesanan as f64 * ppn;
+    let total_yang_harus_dibayar_pelanggan = total_pesanan as f64 + nilai_potong;
+
+    println!("HASIL NILAI POTONG: Rp.{}", nilai_potong);
+    println!(
+        "TOTAL UANG YANG HARUS DIBAYAR: RP.{}",
+        total_yang_harus_dibayar_pelanggan
+    );
+}
 
 // SOAL 3
 // Sinta belanja online seharga $120.
@@ -1044,6 +1074,18 @@ fn soal_70() {
 // Berapa total yang harus Sinta bayar setelah diskon dan ongkir?
 // Simpan ke variable "diskon", "harga_setelah_diskon", "total_bayar", tampilkan semua.
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_73() {
+    let sinta_belanja = 120;
+    let toko_madura_diskon = 0.25;
+    let ongkir = 5;
+
+    let potongan = sinta_belanja as f64 - toko_madura_diskon;
+    let total_bayar = potongan as i32 + ongkir;
+
+    println!("harga yang dipotong: ${}", potongan);
+    println!("hasil yang didapat dari ppn 25% adalah : ${}", total_bayar);
+}
 
 // SOAL 4
 // Sebuah startup menggaji 5 developer dengan total budget gaji $25_000 per bulan.
@@ -1051,6 +1093,27 @@ fn soal_70() {
 // Berapa gaji per developer sebelum pajak dan berapa yang diterima setelah dipotong pajak?
 // Simpan ke variable "gaji_per_dev", "potongan_pajak", "gaji_bersih", tampilkan semua.
 // Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+#[test]
+fn soal_74() {
+    let gaji = 25_000;
+    let employee = 5;
+    let pajak = 0.15;
+    let rata_rata_gaji_per_satu_developer = gaji / employee;
+    let ppn_per_satu_developer = rata_rata_gaji_per_satu_developer as f64 * pajak;
+    let gaji_bersih_per_satu_developer =
+        rata_rata_gaji_per_satu_developer as f64 - ppn_per_satu_developer;
+
+    println!("BUDGET : ${}", gaji);
+    println!(
+        "rata rata gaji per stau developer / 5 : ${}",
+        rata_rata_gaji_per_satu_developer
+    );
+    println!("PPN PER SATU DEVELOPER: ${}", ppn_per_satu_developer);
+    println!(
+        "gaji bersih per satu developer: ${}",
+        gaji_bersih_per_satu_developer
+    );
+}
 
 // SOAL 5
 // Raka ingin membeli motor seharga Rp18_500_000.
@@ -1059,3 +1122,14 @@ fn soal_70() {
 // Berapa total uang yang harus Raka keluarkan?
 // Simpan ke variable "diskon", "harga_setelah_diskon", "total_akhir", tampilkan semua.
 // Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+#[test]
+fn soal_75() {
+    let raka = 18_500_000;
+    let dealer = 0.05;
+    let biaya_administrasi = 250_000;
+    let biaya_balik_nama = 375_000;
+
+    let potongan = raka as f64 - dealer;
+    let result = (potongan as i32 + biaya_administrasi + biaya_balik_nama) as f64 - dealer;
+    println!("hasil yang harus dibayar: RP.{}", result);
+}
