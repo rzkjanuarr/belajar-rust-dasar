@@ -801,6 +801,7 @@ fn soal_60() {
     let nama_token = "ETH";
     let harga = 3_450.75;
     let amount = 5.25;
+
     let kurs_idr = 16_350.0;
 
     let hitung_total_dalam_bentuk_usd = harga * amount;
@@ -809,20 +810,55 @@ fn soal_60() {
     let konversi_tipe_data_dalam_bentuk_integer = hitung_total_dalam_bentuk_idr as u16;
 
     println!("NAMA TOKEN ELON MUSK : {}", nama_token);
-    println!("HARGA ASLI : {}", harga);
-    println!("AMOUNT : {}", amount);
+
+    println!("HARGA ASLI : ${}", harga);
+    println!("AMOUNT SALDO : ${}", amount);
+
     println!("KURS IDR : {}", kurs_idr);
 
     println!(
-        "TOTAL DALAM BENTUK USD (HARGA X AMOUNT): {}",
+        "TOTAL DALAM BENTUK USD (HARGA X AMOUNT): ${}",
         hitung_total_dalam_bentuk_usd
     );
     println!(
-        "TOTAL DALAM BENTUK IDR (FLOATING/ANGKA DESIMAL): {}",
+        "TOTAL DALAM BENTUK IDR (FLOATING/ANGKA DESIMAL): Rp.{}",
         hitung_total_dalam_bentuk_idr
     );
     println!(
-        "HARGA DALAM BENTUK IDR (ANGKA BILANGAN BULAT): {}",
+        "HARGA DALAM BENTUK IDR (ANGKA BILANGAN BULAT): Rp.{}",
         konversi_tipe_data_dalam_bentuk_integer
     );
 }
+
+// SOAL 1
+// Budi punya uang Rp500_000, lalu dia belanja dan menghabiskan Rp175_000.
+// Berapa sisa uang Budi sekarang?
+// Simpan ke variable "sisa_uang", tampilkan.
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Harga 1 kg apel adalah Rp25_000.
+// Ani membeli 4 kg apel.
+// Berapa total yang harus Ani bayar?
+// Simpan ke variable "total_bayar", tampilkan.
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Ada 3 orang patungan untuk beli kado.
+// Total harga kado adalah Rp450_000.
+// Berapa masing-masing orang harus bayar?
+// Simpan ke variable "bayar_per_orang", tampilkan.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Toko elektronik memberikan diskon 15% untuk laptop seharga Rp8_500_000.
+// Berapa harga laptop setelah diskon?
+// Simpan ke variable "diskon" dan "harga_akhir", tampilkan keduanya.
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Dimas punya gaji Rp6_500_000 per bulan.
+// Dia rutin menabung Rp1_200_000 dan bayar kos Rp800_000 setiap bulan.
+// Berapa uang Dimas yang tersisa setelah tabungan dan bayar kos?
+// Simpan ke variable "sisa_gaji", tampilkan.
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
