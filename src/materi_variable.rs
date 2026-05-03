@@ -1270,6 +1270,18 @@ fn soal_80() {
 // Berapa total penjualan dan berapa keuntungan bersih hari ini?
 // Simpan ke variable "total_penjualan", "total_biaya", "keuntungan_bersih", tampilkan semua.
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_81() {
+    let harga_ayam_per_potong = 18_000;
+    let today_profit = 200;
+    let bahan_baku_habis = 1_500_000;
+    let biaya_gas = 200_000;
+
+    let total_penjualan_hari_ini = harga_ayam_per_potong * today_profit;
+    let propit_bersih = total_penjualan_hari_ini - bahan_baku_habis - biaya_gas;
+    println!("PROFIT HARI INI: RP:{}", total_penjualan_hari_ini);
+    println!("PROFIT BERSIH HARI INI: RP:{}", propit_bersih);
+}
 
 // SOAL 2
 // Seorang freelancer mendapat project senilai $3_500.
@@ -1278,34 +1290,18 @@ fn soal_80() {
 // Berapa komisi platform, berapa pajak, dan berapa uang bersih yang diterima freelancer?
 // Simpan ke variable "komisi", "sisa_setelah_komisi", "pajak", "uang_bersih", tampilkan semua.
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_82() {
+    let profit_freelancer = 3_500;
+    let potongan_platform = 0.15;
+    let ppn_pemerintah = 0.10;
 
-// SOAL 3
-// Sebuah apartemen disewakan seharga Rp4_500_000 per bulan.
-// Pemilik harus bayar biaya maintenance 5% dari harga sewa per bulan,
-// dan pajak sewa 10% dari harga sewa per bulan.
-// Berapa total potongan per bulan dan berapa pendapatan bersih pemilik per bulan?
-// Berapa juga pendapatan bersih pemilik selama 12 bulan?
-// Simpan ke variable "maintenance", "pajak", "total_potongan",
-// "pendapatan_bersih_perbulan", "pendapatan_bersih_setahun", tampilkan semua.
-// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+    let potongan_dari_platform = profit_freelancer as f64 * potongan_platform;
+    let potongan_dari_pemerintah = potongan_dari_platform - ppn_pemerintah;
+    let penghasilan_bersih_frelancer =
+        profit_freelancer as f64 - potongan_dari_platform - potongan_dari_pemerintah;
 
-// SOAL 4
-// Dina ingin beli laptop seharga $1_200.
-// Toko memberikan diskon 10%.
-// Dina bayar menggunakan kartu kredit yang mengenakan bunga 2.5% dari harga setelah diskon.
-// Ada biaya pengiriman $15.
-// Berapa harga setelah diskon, berapa bunga kartu kredit, dan berapa total yang harus dibayar?
-// Simpan ke variable "diskon", "harga_setelah_diskon", "bunga", "total_bayar", tampilkan semua.
-// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
-
-// SOAL 5
-// Sebuah toko online punya 3 produk:
-// Sepatu Rp450_000, Kaos Rp120_000, Celana Rp280_000.
-// Pembeli mendapat diskon 20% jika total belanja di atas Rp500_000.
-// Total belanja ketiga produk tersebut memenuhi syarat diskon.
-// Ada ongkir Rp25_000 yang tidak kena diskon.
-// Berapa total belanja sebelum diskon, berapa nilai diskon,
-// berapa total setelah diskon, dan berapa total akhir termasuk ongkir?
-// Simpan ke variable "total_belanja", "diskon", "total_setelah_diskon",
-// "total_akhir", tampilkan semua.
-// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+    println!("POTONGAN DARI PLATFORM: ${}", potongan_dari_platform);
+    println!("POTONGAN DARI Pemerintah: ${}", potongan_dari_pemerintah);
+    println!("penghasil bersih: ${}", penghasilan_bersih_frelancer);
+}
