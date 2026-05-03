@@ -1133,3 +1133,43 @@ fn soal_75() {
     let result = (potongan as i32 + biaya_administrasi + biaya_balik_nama) as f64 - dealer;
     println!("hasil yang harus dibayar: RP.{}", result);
 }
+
+// SOAL 1
+// Toko buku memberikan member card dengan cashback 15% untuk setiap pembelian.
+// Hari ini Dewi membeli buku seharga Rp120_000.
+// Berapa cashback yang Dewi dapat dan berapa uang yang benar-benar dikeluarkan?
+// Simpan ke variable "cashback" dan "harga_bayar", tampilkan keduanya.
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Sebuah kafe menjual kopi seharga Rp35_000 per cup.
+// Hari Sabtu kafe tersebut berhasil menjual 120 cup kopi.
+// Namun kafe harus membayar biaya operasional harian sebesar Rp800_000.
+// Berapa keuntungan bersih kafe hari itu?
+// Simpan ke variable "total_penjualan" dan "keuntungan_bersih", tampilkan semua.
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Kevin punya $5_000 di tabungan dollar.
+// Dia investasi 30% dari tabungannya ke saham dan 20% ke crypto.
+// Berapa uang yang dia investasikan ke saham, ke crypto, dan berapa sisa tabungannya?
+// Simpan ke variable "invest_saham", "invest_crypto", "sisa_tabungan", tampilkan semua.
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Sebuah perusahaan startup punya revenue bulanan $120_000.
+// Biaya server $8_500, gaji tim $45_000, dan biaya marketing $12_000.
+// Pemerintah mengenakan pajak 20% dari profit bersih.
+// Berapa profit sebelum pajak, berapa pajak yang dibayar, dan berapa profit akhirnya?
+// Simpan ke variable "profit_sebelum_pajak", "pajak", "profit_akhir", tampilkan semua.
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Andi ingin kredit motor seharga Rp22_000_000.
+// Dealer minta DP 25% dari harga motor.
+// Sisa harga dicicil selama 24 bulan.
+// Ada biaya asuransi per bulan Rp150_000 yang ikut ditambahkan ke cicilan.
+// Berapa DP yang harus dibayar, berapa cicilan pokok per bulan,
+// dan berapa total cicilan per bulan termasuk asuransi?
+// Simpan ke variable "dp", "sisa_harga", "cicilan_pokok", "total_cicilan_per_bulan", tampilkan semua.
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
