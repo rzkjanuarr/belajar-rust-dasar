@@ -54,6 +54,31 @@ fn soal_3() {
 // Jika suhu antara 20-35, tampilkan "Normal".
 // Jika suhu di atas 35, tampilkan "Panas".
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_4() {
+    let suhu = 38;
+
+    if suhu < 20 {
+        println!("DINGIN");
+    } else if suhu >= 20 && suhu <= 35 {
+        println!("NORMAL");
+    } else if suhu > 35 {
+        println!("PANAS");
+    }
+}
+
+#[test]
+fn soal_4_range() {
+    let suhu = 38;
+
+    if suhu < 20 {
+        println!("DINGIN");
+    } else if (20..=35).contains(&suhu) {
+        println!("NORMAL");
+    } else if suhu > 35 {
+        println!("PANAS");
+    }
+}
 
 // SOAL 2
 // Buat variable "saldo": i64 = 2_500_000.
@@ -62,6 +87,20 @@ fn soal_3() {
 // Jika saldo di atas 500_000, tampilkan "Silver Member".
 // Jika tidak, tampilkan "Regular Member".
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_5() {
+    let saldo = 2_500_000;
+
+    if saldo > 5_000_000 {
+        println!("PLATINUM MEMBER");
+    } else if saldo > 2_000_000 {
+        println!("GOLD MEMBER");
+    } else if saldo > 500_000 {
+        println!("SILVER MEMBER");
+    } else {
+        println!("REGULER MEMBER");
+    }
+}
 
 // SOAL 3
 // Buat variable "umur": u8 = 25.
@@ -70,3 +109,17 @@ fn soal_3() {
 // Jika umur di bawah 60, tampilkan "Dewasa".
 // Jika tidak, tampilkan "Lansia".
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_6() {
+    let umur = 25;
+
+    if umur < 13 {
+        println!("anak-anak");
+    } else if umur < 18 {
+        println!("remaja");
+    } else if umur < 60 {
+        println!("dewasa");
+    } else {
+        println!("lansia");
+    }
+}
