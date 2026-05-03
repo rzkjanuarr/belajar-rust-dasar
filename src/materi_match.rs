@@ -23,7 +23,7 @@ fn materi_match() {
 // - Mirip if/else if tapi jauh lebih rapi untuk banyak kondisi
 
 // SOAL 1
-// Buat variable "hari": u8 = 3.
+
 // Gunakan match untuk tampilkan nama harinya.
 // 1 = "Senin", 2 = "Selasa", 3 = "Rabu", 4 = "Kamis",
 // 5 = "Jumat", 6 = "Sabtu", 7 = "Minggu",
