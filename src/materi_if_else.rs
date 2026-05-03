@@ -47,3 +47,26 @@ fn soal_3() {
         println!("dibawah umur!")
     }
 }
+
+// SOAL 1
+// Buat variable "suhu": i32 = 38.
+// Jika suhu di bawah 20, tampilkan "Dingin".
+// Jika suhu antara 20-35, tampilkan "Normal".
+// Jika suhu di atas 35, tampilkan "Panas".
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Buat variable "saldo": i64 = 2_500_000.
+// Jika saldo di atas 5_000_000, tampilkan "Platinum Member".
+// Jika saldo di atas 2_000_000, tampilkan "Gold Member".
+// Jika saldo di atas 500_000, tampilkan "Silver Member".
+// Jika tidak, tampilkan "Regular Member".
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Buat variable "umur": u8 = 25.
+// Jika umur di bawah 13, tampilkan "Anak-anak".
+// Jika umur di bawah 18, tampilkan "Remaja".
+// Jika umur di bawah 60, tampilkan "Dewasa".
+// Jika tidak, tampilkan "Lansia".
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
