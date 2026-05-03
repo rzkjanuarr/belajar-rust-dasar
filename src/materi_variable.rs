@@ -1140,6 +1140,24 @@ fn soal_75() {
 // Berapa cashback yang Dewi dapat dan berapa uang yang benar-benar dikeluarkan?
 // Simpan ke variable "cashback" dan "harga_bayar", tampilkan keduanya.
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+#[test]
+fn soal_76() {
+    let toko_buku_cashback = 0.15;
+    let dewi_membeli = 120_000;
+
+    let potongan_dewi_membeli = dewi_membeli as f64 * toko_buku_cashback;
+    let harga_yang_harus_dibayar_dewi_adalah = dewi_membeli as f64 - potongan_dewi_membeli;
+
+    println!("HARGA YANG DIBELI DEWI : Rp.{}", dewi_membeli);
+    println!(
+        "Cashback yang didapat Dewi adalah: Rp.{}",
+        potongan_dewi_membeli
+    );
+    println!(
+        "HARGA YANG HARUS DIBAYAR ADALAH: Rp.{}",
+        harga_yang_harus_dibayar_dewi_adalah
+    );
+}
 
 // SOAL 2
 // Sebuah kafe menjual kopi seharga Rp35_000 per cup.
@@ -1148,6 +1166,15 @@ fn soal_75() {
 // Berapa keuntungan bersih kafe hari itu?
 // Simpan ke variable "total_penjualan" dan "keuntungan_bersih", tampilkan semua.
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_77() {
+    let cafe_menjual_cup = 35_000;
+    let hari_sabtu = 120;
+    let biaya_operasional = 800_000;
+
+    let total_penjualan = (cafe_menjual_cup * hari_sabtu) - biaya_operasional;
+    println!("HASIL PENJUALAN KEUNTUNGAN : RP.{}", total_penjualan);
+}
 
 // SOAL 3
 // Kevin punya $5_000 di tabungan dollar.
@@ -1155,6 +1182,27 @@ fn soal_75() {
 // Berapa uang yang dia investasikan ke saham, ke crypto, dan berapa sisa tabungannya?
 // Simpan ke variable "invest_saham", "invest_crypto", "sisa_tabungan", tampilkan semua.
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+#[test]
+fn soal_78() {
+    let kevin_has_saldo = 5_000;
+    let investasi_tabungan = 0.30;
+    let investasi_crypto = 0.20;
+
+    let tabungan = kevin_has_saldo as f64 * investasi_tabungan;
+    let crypto = kevin_has_saldo as f64 * investasi_crypto;
+    let sisa_tabungan_kevin = kevin_has_saldo as f64 - tabungan - crypto;
+
+    println!("SALDO KEVIN : ${}", kevin_has_saldo);
+    println!(
+        "KEVIN HARUS MENGALUARKAN UNTUK TABUNGAN SEBANYAK : ${}",
+        tabungan
+    );
+    println!(
+        "KEVIN HARUS MENGALUARKAN UNTUK CRYPTO SEBANYAK : ${}",
+        crypto
+    );
+    println!("SISA TABUNGAN KEVIN ADALAH : ${}", sisa_tabungan_kevin);
+}
 
 // SOAL 4
 // Sebuah perusahaan startup punya revenue bulanan $120_000.
@@ -1163,6 +1211,27 @@ fn soal_75() {
 // Berapa profit sebelum pajak, berapa pajak yang dibayar, dan berapa profit akhirnya?
 // Simpan ke variable "profit_sebelum_pajak", "pajak", "profit_akhir", tampilkan semua.
 // Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+#[test]
+fn soal_79() {
+    let startup_revenue = 120_000;
+    let biaya_serper = 8_500;
+    let gaji_tim = 45_000;
+    let biaya_marketing = 12_000;
+    let ppn_pemerintah = 0.20;
+
+    let biaya_pajak_yang_harus_dibayar = startup_revenue as f64 * ppn_pemerintah;
+    let profit_sebelum_pajak = startup_revenue - biaya_serper - gaji_tim - biaya_marketing;
+    let profit_setelah_pajak = (startup_revenue - biaya_serper - gaji_tim - biaya_marketing) as f64
+        - biaya_pajak_yang_harus_dibayar;
+
+    println!("REVENUE PERUSAHAAN : ${}", startup_revenue);
+    println!(
+        "PAJAK YANG HARUS DIBAYAR : ${}",
+        biaya_pajak_yang_harus_dibayar
+    );
+    println!("PROFIT SEBELUM KENA PAJAK : ${}", profit_sebelum_pajak);
+    println!("PROFIT SEBELUM KENA PAJAK : ${}", profit_setelah_pajak);
+}
 
 // SOAL 5
 // Andi ingin kredit motor seharga Rp22_000_000.
@@ -1173,3 +1242,23 @@ fn soal_75() {
 // dan berapa total cicilan per bulan termasuk asuransi?
 // Simpan ke variable "dp", "sisa_harga", "cicilan_pokok", "total_cicilan_per_bulan", tampilkan semua.
 // Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+#[test]
+fn soal_80() {
+    let harga_motor = 22_000_000;
+    let dealer_dp = 0.25;
+    let biaya_asuransi = 150_000;
+    let total_bulan = 24;
+
+    let harga_per_bulan = harga_motor as f64 * dealer_dp;
+    let ditambah_biaya_asuransi = harga_per_bulan as i32 + biaya_asuransi;
+    let bulan_24 = ditambah_biaya_asuransi * total_bulan;
+
+    println!(
+        "HARGA YANG HARUS DIBAYAR ANDI PER BULAN ADALAH : RP.{}",
+        ditambah_biaya_asuransi
+    );
+    println!(
+        "HARGA TOTAL YANG HARUS DIBAYAR ANDI SELAMA 24 BULAN: RP{}",
+        bulan_24
+    );
+}
