@@ -3,6 +3,8 @@
 // Rust akan mencocokkan nilai ke setiap "arm" (cabang) dari atas ke bawah.
 // Setiap arm dipisahkan dengan koma, dan wajib ada "_" sebagai default (pengganti else).
 
+use core::range;
+
 // Contoh:
 #[test]
 fn materi_match() {
@@ -50,12 +52,46 @@ fn soal_1() {
 // 1 = "Januari" ... 12 = "Desember", selain itu = "Bulan tidak valid".
 // Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
 
+#[test]
+fn soal_2() {
+    let bulan = 8;
+
+    match bulan {
+        1 => println!("Januari"),
+        2 => println!("Februari"),
+        3 => println!("Maret"),
+        4 => println!("April"),
+        5 => println!("Mei"),
+        6 => println!("Juni"),
+        7 => println!("Juli"),
+        8 => println!("Agustus"),
+        9 => println!("September"),
+        10 => println!("Oktober"),
+        11 => println!("November"),
+        12 => println!("Desember"),
+        _ => println!("Bulan tidak Valid!"),
+    }
+}
+
 // SOAL 2
 // Buat variable "kode_status": u16 = 404.
 // Gunakan match untuk tampilkan artinya.
 // 200 = "OK", 201 = "Created", 400 = "Bad Request",
 // 404 = "Not Found", 500 = "Internal Server Error", selain itu = "Unknown".
 // Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+#[test]
+fn soal_3() {
+    let kode_status = 404;
+
+    match kode_status {
+        200 => println!("OK"),
+        201 => println!("Created"),
+        400 => println!("Bad Request"),
+        404 => println!("Not Found"),
+        500 => println!("Internal Server Error"),
+        _ => println!("Unknown"),
+    }
+}
 
 // SOAL 3
 // Buat variable "nilai": u8 = 78.
@@ -63,6 +99,19 @@ fn soal_1() {
 // 90..=100 = "A", 80..=89 = "B", 70..=79 = "C",
 // 60..=69 = "D", selain itu = "F".
 // Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+#[test]
+fn soal_4() {
+    let nilai = 78;
+
+    match nilai {
+        90..=100 => println!("A"),
+        80..=89 => println!("B"),
+        70..=79 => println!("C"),
+        60..=69 => println!("D"),
+        _ => println!("F"),
+    }
+}
 
 // SOAL 4
 // Buat variable "role": &str = "admin".
@@ -73,6 +122,18 @@ fn soal_1() {
 // selain itu  = "No Access"
 // Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
 
+#[test]
+fn soal_5() {
+    let role = "admin";
+
+    match role {
+        "admin" => println!("Full Access"),
+        "moderator" => println!("Read & Write Access"),
+        "user" => println!("Read Only Access"),
+        _ => println!("No Access"),
+    }
+}
+
 // SOAL 5
 // Buat variable "harga": i64 = 3_500_000.
 // Gunakan match dengan range untuk tampilkan kategori produk.
@@ -81,3 +142,15 @@ fn soal_1() {
 // 2_000_001..=5_000_000 = "Premium"
 // selain itu           = "Luxury"
 // Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
+
+#[test]
+fn soal_6() {
+    let harga = 3_500_000;
+
+    match harga {
+        0..=500_000 => println!("Budget"),
+        500_001..=2_000_000 => println!("Mid Range"),
+        2_000_001..=5_000_000 => println!("Premium"),
+        _ => println!("Luxury"),
+    }
+}
