@@ -43,3 +43,41 @@ fn soal_1() {
         _ => println!("Hari tidak valid"),
     }
 }
+
+// SOAL 1
+// Buat variable "bulan": u8 = 8.
+// Gunakan match untuk tampilkan nama bulannya.
+// 1 = "Januari" ... 12 = "Desember", selain itu = "Bulan tidak valid".
+// Clue: nama function -> fn soal_1(), wajib pakai attribute #[test]
+
+// SOAL 2
+// Buat variable "kode_status": u16 = 404.
+// Gunakan match untuk tampilkan artinya.
+// 200 = "OK", 201 = "Created", 400 = "Bad Request",
+// 404 = "Not Found", 500 = "Internal Server Error", selain itu = "Unknown".
+// Clue: nama function -> fn soal_2(), wajib pakai attribute #[test]
+
+// SOAL 3
+// Buat variable "nilai": u8 = 78.
+// Gunakan match dengan range untuk tampilkan grade.
+// 90..=100 = "A", 80..=89 = "B", 70..=79 = "C",
+// 60..=69 = "D", selain itu = "F".
+// Clue: nama function -> fn soal_3(), wajib pakai attribute #[test]
+
+// SOAL 4
+// Buat variable "role": &str = "admin".
+// Gunakan match untuk tampilkan akses yang dimiliki.
+// "admin"     = "Full Access"
+// "moderator" = "Read & Write Access"
+// "user"      = "Read Only Access"
+// selain itu  = "No Access"
+// Clue: nama function -> fn soal_4(), wajib pakai attribute #[test]
+
+// SOAL 5
+// Buat variable "harga": i64 = 3_500_000.
+// Gunakan match dengan range untuk tampilkan kategori produk.
+// 0..=500_000          = "Budget"
+// 500_001..=2_000_000  = "Mid Range"
+// 2_000_001..=5_000_000 = "Premium"
+// selain itu           = "Luxury"
+// Clue: nama function -> fn soal_5(), wajib pakai attribute #[test]
